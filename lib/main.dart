@@ -11,23 +11,28 @@ class FormularioApp extends StatelessWidget {
 Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
+        appBar: AppBar(iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+          backgroundColor: Colors.cyan,
         ),
         drawer: Drawer(),
         body: SingleChildScrollView(
-          padding: EdgeInsets.all(1),
+          padding: EdgeInsets.all(1), 
           child: Column(
-            spacing: 12,
+            spacing: 14,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.asset("asset/image/logo.png",),
+              Image.asset(
+                "asset/image/logo.png",
+                height: 200,
+                ),
 
               Text(
                 "Formulário",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Colors.cyan,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -109,7 +114,7 @@ Widget build(BuildContext context) {
                 spacing: 7,
                 children: [
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -146,7 +151,7 @@ Widget build(BuildContext context) {
               ),
 
               Row(
-                spacing: 7,
+                spacing: 10,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
@@ -154,12 +159,15 @@ Widget build(BuildContext context) {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.zero,
                       ),
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.cyan,
+                      foregroundColor: Colors.white
                     ),
                     onPressed: () {},
                     child: Text(
                       "Cadastrar",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,),
                     ),
                   ),
                   ElevatedButton(
@@ -167,12 +175,15 @@ Widget build(BuildContext context) {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.zero,
                       ),
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.cyan,
+                      foregroundColor: Colors.white
                     ),
                     onPressed: () {},
                     child: Text(
                       "Limpar",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,),
                     ),
                   ),
                 ],

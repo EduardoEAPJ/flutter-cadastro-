@@ -8,25 +8,24 @@ class FormularioApp extends StatelessWidget {
   const FormularioApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
         ),
-        drawer:Drawer(),
+        drawer: Drawer(),
         body: SingleChildScrollView(
-          padding:EdgeInsets.all(1),
+          padding: EdgeInsets.all(1),
           child: Column(
+            spacing: 12,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(
-                width: 160,
-                height: 150,
-                child: Image.asset("asset/image/logo.png",fit: BoxFit.cover,),
-              ),
-              
-               Text(
+              Image.asset("asset/image/logo.png",),
+
+              Text(
                 "Formulário",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: 25,
@@ -34,11 +33,11 @@ class FormularioApp extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 10),
-
               Row(
-                children:  [
+                spacing: 7,
+                children: [
                   Expanded(
+                    flex: 2,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -46,8 +45,8 @@ class FormularioApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -58,11 +57,11 @@ class FormularioApp extends StatelessWidget {
                 ],
               ),
 
-             SizedBox(height: 10),
-
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
+                    flex: 4,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -70,8 +69,8 @@ class FormularioApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -82,11 +81,11 @@ class FormularioApp extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 10),
-
               Row(
-                children:[
+                spacing: 7,
+                children: [
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -94,8 +93,8 @@ class FormularioApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -106,11 +105,11 @@ class FormularioApp extends StatelessWidget {
                 ],
               ),
 
-             SizedBox(height: 10),
-
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
+                    flex: 2,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -118,8 +117,8 @@ class FormularioApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -127,8 +126,8 @@ class FormularioApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
                   Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -139,44 +138,43 @@ class FormularioApp extends StatelessWidget {
                 ],
               ),
 
-             SizedBox(height: 10),
-
-            TextField(
+              TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Ponto de referência",
                 ),
               ),
 
-               SizedBox(height: 10),
-
               Row(
+                spacing: 7,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero
-                      ),backgroundColor: Colors.red
+                        borderRadius: BorderRadius.zero,
+                      ),
+                      backgroundColor: Colors.red,
                     ),
                     onPressed: () {},
-                    child:Text("Cadastrar",
-                    style: TextStyle(color: Colors.white),
+                    child: Text(
+                      "Cadastrar",
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
-                 SizedBox(width: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero
-                      ),backgroundColor: Colors.red
+                        borderRadius: BorderRadius.zero,
+                      ),
+                      backgroundColor: Colors.red,
                     ),
                     onPressed: () {},
-                    child: Text("Limpar",
-                    style: TextStyle(color: Colors.white),
+                    child: Text(
+                      "Limpar",
+                      style: TextStyle(color: Colors.white),
                     ),
-                    ),
-                  
+                  ),
                 ],
               ),
             ],

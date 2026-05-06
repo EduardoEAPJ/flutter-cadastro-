@@ -154,36 +154,44 @@ Widget build(BuildContext context) {
                 spacing: 10,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero,
+                  Expanded(
+                    child: SizedBox(height: 50,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero,
+                          ),
+                          backgroundColor: Colors.cyan,
+                          foregroundColor: Colors.white
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          "Cadastrar",
+                          style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,),
+                        ),
                       ),
-                      backgroundColor: Colors.cyan,
-                      foregroundColor: Colors.white
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      "Cadastrar",
-                      style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,),
                     ),
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero,
+                  Expanded(
+                    child: SizedBox(height: 50,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero,
+                          ),
+                          backgroundColor: Colors.cyan,
+                          foregroundColor: Colors.white
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          "Limpar",
+                          style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,),
+                        ),
                       ),
-                      backgroundColor: Colors.cyan,
-                      foregroundColor: Colors.white
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      "Limpar",
-                      style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,),
                     ),
                   ),
                 ],
